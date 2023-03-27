@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS animals;
+CREATE DATABASE vet_clinic;
 
 -- create the table
 CREATE TABLE animals (
