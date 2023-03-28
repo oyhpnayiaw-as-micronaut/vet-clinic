@@ -1,6 +1,8 @@
 CREATE DATABASE vet_clinic;
 
--- create the table
+\c vet_clinic;
+
+-- Create the table
 CREATE TABLE animals (
     id serial PRIMARY KEY,
     name varchar(255),
