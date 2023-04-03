@@ -22,23 +22,23 @@ SELECT * FROM animals WHERE name != 'Gabumon';
 -- Find all animals with a weight between 10.4kg and 17.3kg (inclusive).
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 
--- Update the animals table by setting the species column to unspecified.
--- And rollback the changes.
-BEGIN;
-  UPDATE animals SET species = 'unspecified';
-ROLLBACK;
-
--- Update the animals table by setting the species column to digimon for all animals that have a name ending in mon.
--- Update the animals table by setting the species column to pokemon for all animals that don't have species already set.
-BEGIN;
-  UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
-  UPDATE animals SET species = 'pokemon' WHERE species IS NULL;
-COMMIT;
-
--- Delete all records in the animals table, then roll back the transaction.
-BEGIN;
-  DELETE FROM animals;
-ROLLBACK;
+-- -- Update the animals table by setting the species column to unspecified.
+-- -- And rollback the changes.
+-- BEGIN;
+--   UPDATE animals SET species = 'unspecified';
+-- ROLLBACK;
+--
+-- -- Update the animals table by setting the species column to digimon for all animals that have a name ending in mon.
+-- -- Update the animals table by setting the species column to pokemon for all animals that don't have species already set.
+-- BEGIN;
+--   UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
+--   UPDATE animals SET species = 'pokemon' WHERE species IS NULL;
+-- COMMIT;
+--
+-- -- Delete all records in the animals table, then roll back the transaction.
+-- BEGIN;
+--   DELETE FROM animals;
+-- ROLLBACK;
 
 -- Delete all animals born after Jan 1st, 2022.
 -- Create a savepoint for the transaction.
@@ -65,11 +65,11 @@ SELECT AVG(weight_kg) FROM animals;
 -- Who escapes the most, neutered or not neutered animals?
 SELECT neutered, MAX(escape_attempts) FROM animals GROUP BY neutered;
 
--- What is the minimum and maximum weight of each type of animal?
-SELECT species, MIN(weight_kg), MAX(weight_kg) FROM animals GROUP BY species;
-
--- What is the average number of escape attempts per animal type of those born between 1990 and 2000?
-SELECT SPECIES, AVG(ESCAPE_ATTEMPTS) FROM ANIMALS WHERE DATE_OF_BIRTH BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY SPECIES;
+-- -- What is the minimum and maximum weight of each type of animal?
+-- SELECT species, MIN(weight_kg), MAX(weight_kg) FROM animals GROUP BY species;
+--
+-- -- What is the average number of escape attempts per animal type of those born between 1990 and 2000?
+-- SELECT SPECIES, AVG(ESCAPE_ATTEMPTS) FROM ANIMALS WHERE DATE_OF_BIRTH BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY SPECIES;
 
 -- What animals belong to Melody Pond?
 SELECT * FROM animals WHERE owner_id = (SELECT id FROM owners WHERE full_name = 'Melody Pond');
