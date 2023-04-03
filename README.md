@@ -120,6 +120,12 @@ psql -U <username> -d <databasename> -f queries.sql
  - Twitter: [@oyhpnayiaw](https://twitter.com/oyhpnayiaw) 
  - LinkedIn: [@oyhpnayiaw](https://linkedin.com/in/oyhpnayiaw) 
 
+ **Muhammad Talha Hanif**
+
+- GitHub: [@githubhandle](https://github.com/Talha-Hanif5666)
+- Twitter: [@twitterhandle](https://twitter.com/TalhaHa45039660?t=R4git6jFgsysI4xPxmN-ag&s=09)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/muhammad-talha-hanif-6b1355116)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
