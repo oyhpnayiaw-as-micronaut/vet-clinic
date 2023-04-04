@@ -58,18 +58,6 @@ Vet Clinic is a relational database based on a real-life example.
 
 - **Db performance audit**
 
-
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-
-- **Live demo not available at this time**
-
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
